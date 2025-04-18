@@ -9,12 +9,7 @@ class Solution {
           max1=nums[n-1]*nums[n-2]*nums[n-3];
           max2=nums[0]*nums[1]*nums[n-1];
         }
-        if(max1>max2){
-            ans=max1;
-        }
-        else{
-            ans=max2;
-        }
-        return ans;
+       
+        return Math.max(max1,max2);
     }
 }
