@@ -1,6 +1,6 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        int n=nums.length;
+         int n=nums.length;
         int max=n/2;
         Map<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<n;i++){
@@ -13,5 +13,6 @@ class Solution {
             }
         }
         return -1;
-    }
+    
+     }
 }
