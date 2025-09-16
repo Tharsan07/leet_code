@@ -1,20 +1,37 @@
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        int[] count = new int[26]; // store frequency of each letter in magazine
+       
+       StringBuilder sb=new StringBuilder(magazine);
 
-        // Step 1: Count letters in magazine
-        for (char c : magazine.toCharArray()) {
-            count[c - 'a']++;
+    char[] arr=ransomNote.toCharArray();
+       for(int i=0;i<arr.length;i++){
+        int ind=sb.indexOf(String.valueOf(arr[i]));
+        if(ind==-1){
+            return false;
         }
-
-        // Step 2: Check ransomNote letters
-        for (char c : ransomNote.toCharArray()) {
-            if (count[c - 'a'] == 0) {
-                return false; // not enough of this letter
-            }
-            count[c - 'a']--; // use one letter
-        }
-
-        return true; // all ransomNote letters found
+        sb.deleteCharAt(ind);
+       }
+       return true;
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        // int[] count = new int[26]; 
+        // for (char c : magazine.toCharArray()) {
+        //     count[c - 'a']++;
+        // }   
+        // for (char c : ransomNote.toCharArray()) {
+        //     if (count[c - 'a'] == 0) {
+        //         return false; 
+        //     }
+        //     count[c - 'a']--; 
+        // }
+        // return true; 
     }
 }
