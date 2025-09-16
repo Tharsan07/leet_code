@@ -18,8 +18,8 @@ class Solution {
         }
         temp=head;
         while(temp!=null){
-            temp.val=stack.pop();
-            temp=temp.next;
+           temp.val=stack.pop();
+           temp=temp.next;
         }
         return head;
     }
