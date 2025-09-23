@@ -20,9 +20,10 @@ class Solution {
         ListNode current=head;
         while(!stack.isEmpty() && current!=null){
             if(current.val!=stack.pop()){
-              return false;  
+                return false;
+               
             }
-            current=current.next;
+             current=current.next;
         }
         return true;
     }
